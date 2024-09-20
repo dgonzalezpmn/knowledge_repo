@@ -25,6 +25,28 @@ import { createRoot } from 'react-dom/client';
 
 Virtual DOM
 
+Differences between JSX and HTML
+
+class vs className
+
+Curly Braces
+
+Event Listeners
+
+onClick
+
+JSX Conditionals
+
+Keys
+
+React without JSX
+
+React Components
+
+React Dom Library
+
+Function Components
+
 Official Documentation
 
 Courses
