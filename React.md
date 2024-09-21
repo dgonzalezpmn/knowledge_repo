@@ -47,6 +47,37 @@ React Dom Library
 
 Function Components
 
+Props
+
+Passing event handlers as props
+
+props.children
+
+```
+<TODO add props.children example>
+```
+
+Default props
+
+```
+function Component(props) {
+  return (<div>{props.foobar}</div>);
+}
+
+Component.defaultProps = {
+  foobar: '123';
+};
+
+or
+
+function Component({ foobar = '123' }) {
+  return (<div>{foobar}</div>);
+}
+
+```
+
+React Developer Tools
+
 Official Documentation
 
 Courses
