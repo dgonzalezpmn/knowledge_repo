@@ -78,6 +78,50 @@ function Component({ foobar = '123' }) {
 
 React Developer Tools
 
+Hooks
+
+"React Hooks, plainly put, are functions that let us manage the internal state of components and handle post-rendering side effects directly from our function components. Using Hooks, we can determine what we want to show the users by declaring how our user interface should look based on the state."
+
+Example hooks
+- useState()
+- useEffect()
+- useContext()
+- useReducer()
+- useRef()
+
+State Hook
+
+```
+import React, { useState } from 'react';
+```
+
+Returns an array. First item is the current state. Second item is the function to update the state.
+
+```
+const [currentState, setCurrentState] = useState();
+```
+
+Use callbacks with the set state functions to update state.
+
+```
+  setCurrentState((prev) => {
+
+  });
+```
+
+Effect Hook
+
+Effect hook sample use cases
+- fetch data from a back-end service
+- subscribe to a stream of data
+- manage timers and intervals
+- read from and make changes to the DOM
+
+Effect hook runs in the following scenarios
+- When the component is first added, or mounted, to the DOM and renders.
+- When the state or props change, causing the component to re-render.
+- When the component is removed, or unmounted, from the DOM.
+
 Official Documentation
 
 Courses
