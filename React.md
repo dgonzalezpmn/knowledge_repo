@@ -122,6 +122,14 @@ Effect hook runs in the following scenarios
 - When the state or props change, causing the component to re-render.
 - When the component is removed, or unmounted, from the DOM.
 
+Clean Up Effects
+
+For example, remove event listeners.
+
+```
+<Todo: Example of how to clean up effects>
+```
+
 Official Documentation
 
 Courses
