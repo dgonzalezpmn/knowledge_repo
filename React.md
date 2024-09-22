@@ -184,6 +184,92 @@ There are two terms that will probably come up when you talk about React forms: 
 
 An uncontrolled component is a component that maintains its own internal state. A controlled component is a component that does not maintain any internal state. Since a controlled component has no state, it must be controlled by someone else.
 
+Other Hooks
+
+useCallback
+
+useContext
+
+```
+import { createContext, useContext } from 'react';
+
+const ThemeContext = createContext(null);
+
+export default function MyApp() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Form />
+    </ThemeContext.Provider>
+  )
+}
+
+function Form() {
+  return (
+    <Panel title="Welcome">
+      <Button>Sign up</Button>
+      <Button>Log in</Button>
+    </Panel>
+  );
+}
+
+function Panel({ title, children }) {
+  const theme = useContext(ThemeContext);
+  const className = 'panel-' + theme;
+  return (
+    <section className={className}>
+      <h1>{title}</h1>
+      {children}
+    </section>
+  )
+}
+
+function Button({ children }) {
+  const theme = useContext(ThemeContext);
+  const className = 'button-' + theme;
+  return (
+    <button className={className}>
+      {children}
+    </button>
+  );
+}
+```
+
+useMemo
+
+useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+
+```
+const cachedValue = useMemo(calculateValue, dependencies)
+```
+
+useReducer
+
+Call useReducer at the top level of your component to manage its state with a reducer.
+
+```
+import { useReducer } from 'react';
+
+function reducer(state, action) {
+  // ...
+}
+
+function MyComponent() {
+  const [state, dispatch] = useReducer(reducer, { age: 42 });
+  // ...
+```
+
+Parameters
+
+- reducer: The reducer function that specifies how the state gets updated. It must be pure, should take the state and action as arguments, and should return the next state. State and action can be of any types.
+
+useRef
+
+useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+
+```
+const ref = useRef(initialValue)
+```
+
 Official Documentation
 
 Courses
