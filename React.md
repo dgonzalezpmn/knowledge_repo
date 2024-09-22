@@ -157,6 +157,27 @@ Container vs Presentational Components
 
 The pattern we’ll learn about focuses on splitting complex components into stateful (container) and stateless (presentational) components, where stateful components manage complex state or logic and stateless components only render JSX.
 
+React Styles
+
+Inline Styles
+
+```
+```
+
+Style Object Variables
+
+```
+```
+
+StyleSheet Per Component
+
+```
+```
+
+className attribute
+
+React Forms
+
 Official Documentation
 
 Courses
