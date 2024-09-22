@@ -130,6 +130,33 @@ For example, remove event listeners.
 <Todo: Example of how to clean up effects>
 ```
 
+Calling Effects
+
+If we want to only call our effect after the first render, we pass an empty array to useEffect() as the second argument. This second argument is called the dependency array.
+
+```
+```
+
+If we want to call our effect when a specific value changes.
+
+```
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // Only re-run the effect if the value stored by count changes
+```
+
+Hook Gotchas
+
+There are two main rules to keep in mind when using Hooks:
+- Only call Hooks at the top level.
+- Only call Hooks from React functions.
+
+Custom Hooks
+
+Container vs Presentational Components
+
+The pattern we’ll learn about focuses on splitting complex components into stateful (container) and stateless (presentational) components, where stateful components manage complex state or logic and stateless components only render JSX.
+
 Official Documentation
 
 Courses
