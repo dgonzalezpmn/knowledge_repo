@@ -178,6 +178,12 @@ className attribute
 
 React Forms
 
+Controlled vs Uncontrolled
+
+There are two terms that will probably come up when you talk about React forms: controlled component and uncontrolled component.
+
+An uncontrolled component is a component that maintains its own internal state. A controlled component is a component that does not maintain any internal state. Since a controlled component has no state, it must be controlled by someone else.
+
 Official Documentation
 
 Courses
